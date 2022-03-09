@@ -17,17 +17,11 @@ public class OI {
         controller = new XboxController(0);
     }
 
-    public XboxController getController() {
-        return controller;
-    }
-
     public boolean getAButtonPressed() {
-        boolean pressed = controller.getAButtonPressed();
-        return pressed;
+        return controller.getAButtonPressed();
     }
 
     public boolean getBButtonPressed() {
-        boolean pressed = controller.getBButtonPressed();
-        return pressed;
+        return controller.getBButtonPressed();
     }
 }

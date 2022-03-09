@@ -25,16 +25,8 @@
 package com.github.mittyrobotics;
 
 
-import com.github.mittyrobotics.commands.ColorWheelCommandExtendPiston;
-import com.revrobotics.ColorSensorV3;
-import edu.wpi.first.wpilibj.I2C;
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-
-import com.revrobotics.ColorMatchResult;
-import com.revrobotics.ColorMatch;
 
 /**
  * Robot Class to run the robot code (uses timed robot)
