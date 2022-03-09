@@ -1,10 +1,8 @@
 package com.github.mittyrobotics.commands;
 
-import com.github.mittyrobotics.subsystems.ColorWheel;
-import com.revrobotics.ColorMatch;
+import com.github.mittyrobotics.subsystems.MotorSubsystems;
 import com.revrobotics.ColorMatchResult;
 import edu.wpi.first.wpilibj.controller.PIDController;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
@@ -26,12 +24,12 @@ public class ColorWheelCommandRunMotor extends CommandBase {
         //how do you spin two full rotations
         //Do I use controller?
 
-        Color detectedColor = ColorWheel.getInstance().getColorSensor().getColor();
-        ColorMatchResult match = ColorWheel.getInstance().getColorMatcher().matchClosestColor(detectedColor);
+        Color detectedColor = MotorSubsystems.getInstance().getColorSensor().getColor();
+        ColorMatchResult match = MotorSubsystems.getInstance().getColorMatcher().matchClosestColor(detectedColor);
 
-        Color desiredColor = ColorWheel.getInstance().getkBlueTarget();
+        Color desiredColor = MotorSubsystems.getInstance().getkBlueTarget();
 
-        if(match.color == ColorWheel.getInstance().getkBlueTarget()) {
+        if(match.color == MotorSubsystems.getInstance().getkBlueTarget()) {
             foundDesiredColor = true;
         }
         else {
@@ -48,7 +46,7 @@ public class ColorWheelCommandRunMotor extends CommandBase {
 
     @Override
     public void end(boolean interrupted) {
-        ColorWheel.getInstance().setMotors(0);
+        MotorSubsystems.getInstance().setMotors(0);
     }
 
     @Override

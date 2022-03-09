@@ -1,13 +1,12 @@
 package com.github.mittyrobotics.commands;
 
-import com.github.mittyrobotics.OI;
-import com.github.mittyrobotics.subsystems.ColorWheel;
+import com.github.mittyrobotics.subsystems.MotorSubsystems;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 public class ColorWheelCommandExtendPiston extends CommandBase {
     @Override
     public void initialize() {
-        ColorWheel.getInstance().setSolenoid("forward");
+        MotorSubsystems.getInstance().setSolenoid("forward");
     }
 
     @Override

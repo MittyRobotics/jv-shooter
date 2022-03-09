@@ -6,14 +6,15 @@ import com.revrobotics.ColorMatch;
 import com.revrobotics.ColorSensorV3;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.I2C;
-import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.controller.PIDController;
 import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class ColorWheel extends SubsystemBase {
+public class MotorSubsystems extends SubsystemBase {
 
-    private static ColorWheel instance;
+    //initialize motors
+    //make functions for the motors
+
+    private static MotorSubsystems instance;
     private WPI_TalonSRX motor;
     private DoubleSolenoid solenoid;
 
@@ -28,9 +29,9 @@ public class ColorWheel extends SubsystemBase {
     final Color kYellowTarget = ColorMatch.makeColor(0.361, 0.524, 0.113);
 
 
-    public static ColorWheel getInstance() {
+    public static MotorSubsystems getInstance() {
         if(instance==null) {
-            instance = new ColorWheel();
+            instance = new MotorSubsystems();
         }
         return instance;
     }

@@ -1,13 +1,13 @@
 package com.github.mittyrobotics.commands;
 
-import com.github.mittyrobotics.subsystems.ColorWheel;
+import com.github.mittyrobotics.subsystems.MotorSubsystems;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 public class ColorWheelCommandLowerPiston extends CommandBase {
 
     @Override
     public void initialize() {
-        ColorWheel.getInstance().setSolenoid("reverse");
+        MotorSubsystems.getInstance().setSolenoid("reverse");
     }
 
     @Override
