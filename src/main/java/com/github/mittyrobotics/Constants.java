@@ -1,12 +1,12 @@
-package main.java.com.github.mittyrobotics;
-
-import com.revrobotics.ColorMatch;
-import edu.wpi.first.wpilibj.util.Color;
+package com.github.mittyrobotics;
 
 public class Constants {
-    //Is it necessary?
-    public static final Color kBlueTarget = ColorMatch.makeColor(0.143, 0.427, 0.429);
-    public static final Color kGreenTarget = ColorMatch.makeColor(0.197, 0.561, 0.240);
-    public static final Color kRedTarget = ColorMatch.makeColor(0.561, 0.232, 0.114);
-    public static final Color kYellowTarget = ColorMatch.makeColor(0.361, 0.524, 0.113);
+    public static int desiredRPM = 100;
+    public static int leftTalonID = 0;
+    public static int rightTalonID = 0;
+    public static int lightsID = 0;
+    public static int lightsLength = 2;
+    public static double okRange = 0.1;
+    public static int controllerID = 0;
+
 }

@@ -1,33 +1,17 @@
 package com.github.mittyrobotics;
 
-import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.*;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
-public class OI {
+public class OI{
     private static OI instance;
-    private XboxController controller;
+    private XboxController controller = new XboxController(Constants.controllerID);
 
-    public static OI getInstance() {
-        if(instance==null) {
-            instance = new OI();
-        }
-        return instance;
+    public static OI getInstance(){
+        return instance == null ? instance = new OI() : instance;
     }
-
-    public void initOI() {
-        controller = new XboxController(0);
-    }
-
-    public XboxController getController() {
+    public void initOI(){}
+    public XboxController getController(){
         return controller;
-    }
-
-    public boolean getAButtonPressed() {
-        boolean pressed = controller.getAButtonPressed();
-        return pressed;
-    }
-
-    public boolean getBButtonPressed() {
-        boolean pressed = controller.getBButtonPressed();
-        return pressed;
     }
 }
